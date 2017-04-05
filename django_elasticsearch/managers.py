@@ -346,7 +346,7 @@ class ElasticsearchManager():
         for instance in q:
             instance.es.do_index()
 
-    def yield_serialized_data(self, queryset=None)
+    def yield_serialized_data(self, queryset=None):
         q = queryset or self.model.objects.all()
         for instance in q:
             yield instance.es.serialize()
